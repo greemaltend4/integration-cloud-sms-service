@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.post('/webhook/sms-status', (req, res) => {
     const { smsId, status } = req.body;
-    // Logique pour traiter la notification de statut
+    // Logic to process the status notification
     console.log(`Statut de SMS ${smsId}: ${status}`);
     res.status(200).send({ success: true });
 });
