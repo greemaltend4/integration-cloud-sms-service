@@ -6,7 +6,7 @@ function addContact(name, phone) {
     if (!existingContact) {
         contacts.push({ name, phone });
     } else {
-        console.info('Contact with this name already exists.');
+        console.warn('Contact with this name already exists.');
     }
 }
 
