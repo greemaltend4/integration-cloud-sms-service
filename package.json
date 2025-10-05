@@ -1,0 +1,13 @@
+{
+  "name": "integration-cloud-sms-service",
+  "version": "1.0.0",
+  "description": "Service pour envoyer et gérer des notifications SMS dans le cloud.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0"
+  }
+}
