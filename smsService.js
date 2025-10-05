@@ -3,13 +3,16 @@ const config = require('./config');
 function sendSMS(phone, message) {
     // Logique pour sélectionner un fournisseur et envoyer un SMS
     return new Promise((resolve, reject) => {
-        // Simule l'envoi de SMS
+        // Check for missing parameters
         if (!phone || !message) {
             return reject(new Error('Phone number and message are required.'));
         }
+        // Check parameter types
         if (typeof phone !== 'string' || typeof message !== 'string') {
             return reject(new Error('Phone number and message must be strings.'));
         }
+        // Log the SMS sending action
+        console.log(`Preparing to send SMS to ${phone}.`);
         setTimeout(() => {
             console.log(`SMS envoyé à ${phone}: ${message}`);
             resolve({ success: true });
