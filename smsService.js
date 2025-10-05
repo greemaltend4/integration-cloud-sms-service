@@ -7,6 +7,9 @@ function sendSMS(phone, message) {
         if (!phone || !message) {
             return reject(new Error('Phone number and message are required.'));
         }
+        if (typeof phone !== 'string' || typeof message !== 'string') {
+            return reject(new Error('Phone number and message must be strings.'));
+        }
         setTimeout(() => {
             console.log(`SMS envoyé à ${phone}: ${message}`);
             resolve({ success: true });
