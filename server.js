@@ -8,10 +8,10 @@ app.use(bodyParser.json());
 
 app.post('/api/sms/send', (req, res) => {
     const { phone, message } = req.body;
-    // Logique pour envoyer un SMS ici
-    res.status(201).send({ success: true, message: 'SMS envoyé avec succès!' });
+    // Logic to send an SMS goes here
+    res.status(201).send({ success: true, message: 'SMS sent successfully!' });
 });
 
 app.listen(PORT, () => {
-    console.log(`Serveur en cours d'exécution sur le port ${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
